@@ -31,17 +31,18 @@ std::vector<Proxy> ProxyParser::ParseFromFile(const std::string& path)
 {
 	std::vector<Proxy> result;
 	std::ifstream file(path);
-     if(!file.is_open())
-     {
-          std::cerr << "Cannot open proxy file: " << path << "\n";
-          return {};
-     }
+	if(!file.is_open())
+	{
+		std::cerr << "Cannot open proxy file: " << path << "\n";
+		return {};
+	}
 	std::string line;
 
 	while(std::getline(file, line))
 	{
 		if(line.empty())
-			break;;
+			break;
+		;
 
 		std::string original = line;
 		std::string typePrefix;

@@ -2,11 +2,11 @@
 #include <algorithm>
 #include <curl/curl.h>
 #include <fstream>
+#include <iostream>
 #include <optional>
 #include <sstream>
 #include <string>
 #include <vector>
-#include <iostream>
 
 enum class ProxyType
 {

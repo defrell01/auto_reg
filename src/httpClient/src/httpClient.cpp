@@ -34,7 +34,7 @@ std::future<std::optional<std::string>> HttpClient::Get(const std::string& url)
 		curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
 		if(!proxy.address.empty())
 		{
-               std::cout << proxy.ToCurlProxy() << "\n";
+			std::cout << proxy.ToCurlProxy() << "\n";
 
 			curl_easy_setopt(curl, CURLOPT_PROXY, proxy.ToCurlProxy().c_str());
 			curl_easy_setopt(curl, CURLOPT_PROXYTYPE, proxy.CurlProxyType());

@@ -1,10 +1,10 @@
-#include <proxyParser/proxyParser.hpp>
 #include <httpClient/httpClient.hpp>
+#include <proxyParser/proxyParser.hpp>
 
 int main()
 {
-     ProxyParser parser{};
-     auto proxies = parser.ParseFromFile("./proxy.txt");
+	ProxyParser parser{};
+	auto proxies = parser.ParseFromFile("./proxy.txt");
 
 	HttpClient client(proxies);
 
