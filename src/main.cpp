@@ -8,11 +8,11 @@ int main()
 
 	HttpClient client(proxies);
 
-	auto response = client.Get("https://httpbin.org/ip").get();
+	auto response = client.GetJson("https://httpbin.org/ip").get();
 
 	if(response)
 	{
-		std::cout << "Response: " << *response << "\n";
+		std::cout << "Response: " << (*response).dump(-1) << "\n";
 	}
 	else
 	{
